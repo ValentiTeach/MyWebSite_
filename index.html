@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій Веб-сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Екран логіну -->
+    <div id="login-screen" class="container">
+        <form id="login-form" class="auth-form">
+            <h2>Вхід до системи</h2>
+            <input type="text" id="username" placeholder="Логін (admin)" required>
+            <input type="password" id="password" placeholder="Пароль (1234)" required>
+            <button type="submit">Увійти</button>
+            <p id="error-msg" class="error"></p>
+        </form>
+    </div>
+
+    <!-- Основний контент (спочатку прихований) -->
+    <div id="main-content" class="hidden">
+        <nav class="navbar">
+            <button onclick="showSection('tests')">Тести</button>
+            <button onclick="showSection('profile')">Профіль</button>
+            <button onclick="showSection('about')">Про сайт</button>
+            <button onclick="logout()" class="btn-logout">Вийти</button>
+        </nav>
+
+        <main class="container">
+            <!-- Розділ Тести -->
+            <section id="tests" class="content-section">
+                <h1>Наші Тести</h1>
+                <p>Тут згодом з'являться інтерактивні тести.</p>
+                <ul>
+                    <li>Тест з Історії</li>
+                    <li>Тест з Програмування</li>
+                </ul>
+            </section>
+
+            <!-- Розділ Профіль -->
+            <section id="profile" class="content-section hidden">
+                <h1>Мій Профіль</h1>
+                <p>Вітаємо, <span id="user-display">Користувач</span>!</p>
+                <div class="avatar"></div>
+            </section>
+
+            <!-- Розділ Про сайт -->
+            <section id="about" class="content-section hidden">
+                <h1>Про сайт</h1>
+                <p>Це простий навчальний шаблон, створений на HTML, CSS та JS.</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
